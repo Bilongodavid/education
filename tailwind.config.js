@@ -9,6 +9,7 @@ module.exports = {
       "black-light-50": "#636D77",
       primary: "#5667FD",
       light: "#ffff",
+      pink: "#E8DBDB",
     },
   },
   plugins: [],

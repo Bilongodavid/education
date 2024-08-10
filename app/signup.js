@@ -1,23 +1,20 @@
 import {
   Image,
   ScrollView,
+  StatusBar,
   Text,
   TextInput,
-  TouchableOpacity,
   View,
 } from "react-native";
-import { ButtonComponent } from "../components/ButtonComponent";
 import { Link } from "expo-router";
 
 export default function SignUp() {
   return (
     <ScrollView>
+      <StatusBar hidden />
       <View className="mx-4">
         <View className="items-center">
-          <Image
-            source={require("../../assets/Main img2.png")}
-            className="w-40 h-40"
-          />
+          <Image source={require("../assets/Main img2.png")} />
         </View>
 
         <View className="mt-4">
@@ -46,13 +43,19 @@ export default function SignUp() {
         </View>
 
         <View className="items-center mt-6">
-          <ButtonComponent title={"Sign up"} />
-          <TouchableOpacity className="p-4 items-center mt-1 rounded rounded-lg flex flex-row">
+          <Link
+            className="text-light font-bold text-md p-4 bg-primary w-40 text-center mt-3 rounded rounded-lg"
+            href="/explore"
+          >
+            Sign up
+          </Link>
+
+          <View className="p-4 items-center mt-1 rounded rounded-lg flex flex-row">
             <Text className="text-md">You have account ? </Text>
-            <Link className="text-primary text-md" href="screens/signin">
+            <Link className="text-primary text-md" href="signin">
               Sign in
             </Link>
-          </TouchableOpacity>
+          </View>
         </View>
       </View>
     </ScrollView>
